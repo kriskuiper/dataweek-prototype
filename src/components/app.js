@@ -1,14 +1,26 @@
 import { h, Component } from 'preact';
 
-class App extends Component {
-	state = { name: 'alles' }
+import AppForm from './app-form'
 
-	render() {
-		const imgPath = `/assets/images/${this.state.name}.png`
+class App extends Component {
+	state = { name: 'geluid-verkeer-1' }
+
+	render({}, { name }) {
+		const imgPath = `/assets/images/${name}.png`
 
 		return (
 			<div id="app">
-				<img src={imgPath} />
+				<main class="layout">
+					<div class="app-image-container">
+						<img src={imgPath} class="app-image" />
+					</div>
+					<div class="app-form-container">
+						<AppForm
+							onChange={this.handleChange}
+							value={name}
+						/>
+					</div>
+				</main>
 			</div>
 		)
 	}
