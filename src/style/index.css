@@ -36,6 +36,11 @@ button {
 	opacity: 0.9;
 }
 
+.app-image--has-extra-class {
+	left: -18px;
+	top: -1px;
+}
+
 .app-form-container {
 	flex-grow: 1;
 	display: flex;

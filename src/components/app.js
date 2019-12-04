@@ -33,11 +33,28 @@ class App extends Component {
 				<main class="layout">
 					<div class="app-image-container">
 						<img src="/assets/images/background.png" class="app-image" />
-						{imagesToRender.map(image => (
-							image.isShown
-								? <img src={`/assets/images/${image.name}.png`} class="app-image app-image--is-vague" />
-								: ''
-						))}
+
+						{/* Crying because of the awful pattern here, have to refactor this */}
+						{imagesToRender.map(image => {
+							if (!image.isShown) return ''
+
+							else if (image.hasExtraClass) {
+								return (
+									<img 
+										src={`/assets/images/${image.name}.png`} 
+										class="app-image app-image--is-vague app-image--has-extra-class"
+									/>
+								)
+							} else {
+								return (
+									<img
+										src={`/assets/images/${image.name}.png`}
+										class="app-image app-image--is-vague"
+									/>
+								)
+							}
+						})}
+
 						<img src="/assets/images/gebied-namen.png" class="app-image" />
 					</div>
 					<div class="app-form-container">
