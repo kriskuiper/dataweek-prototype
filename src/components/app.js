@@ -1,9 +1,17 @@
 import { h, Component } from 'preact';
 
-import AppForm from './app-form'
+import imgNames from './img-names'
 
 class App extends Component {
-	state = { name: 'geluid-verkeer-1' }
+	state = { name: 'alles' }
+
+	handleFormChange = (event) => {
+		if (event.target.checked) {
+			return this.setState({ name: event.target.value })
+		}		
+
+		return
+	}
 
 	render({}, { name }) {
 		const imgPath = `/assets/images/${name}.png`
@@ -15,10 +23,25 @@ class App extends Component {
 						<img src={imgPath} class="app-image" />
 					</div>
 					<div class="app-form-container">
-						<AppForm
-							onChange={this.handleChange}
-							value={name}
-						/>
+					<form class="app-form">
+						{imgNames.map((imgName, i) => (
+							<div class="app-form__input-group">
+								<input
+									class="app-form__checkbox"
+									type="checkbox"
+									value={imgName}
+									id={`name-${i}`}
+									onChange={this.handleFormChange}
+								/>
+								<label
+									class="app-form__label"
+									for={`name-${i}`}
+								>
+									{imgName}
+								</label>
+							</div>
+						))}
+					</form>
 					</div>
 				</main>
 			</div>
