@@ -9,18 +9,23 @@
 }
 
 .app-image-container {
+	position: relative;
+	width: 1000px;
 	flex-grow: 1;
 	height: 100vh;
 	overflow: hidden;
 }
 
 .app-image {
+	position: absolute;
+	top: 0;
+	left: 0;
 	display: block;
 	width: 100%;
 }
 
 .app-form-container {
-	width: 1000px;
+	flex-grow: 1;
 	height: 100vh;
 	background: grey;
 }
