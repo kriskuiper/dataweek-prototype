@@ -1,20 +1,49 @@
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
-#app {
-	height: 100%;
+.layout {
+	display: flex;
+}
+
+.app-image-container {
+	flex-grow: 1;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.app-image {
+	display: block;
+	width: 100%;
+}
+
+.app-form-container {
+	width: 1000px;
+	height: 100vh;
+	background: grey;
+}
+
+.app-form {
+	padding: 1rem;
+}
+
+.app-form__input-group {
+	margin-bottom: 0.875rem;
+}
+
+.app-form__checkbox {
+	position: absolute;
+	transform: translateX(-9999px);
+}
+
+.app-form__label {
+	display: block;
+	background: lightgrey;
+	padding: 1rem;
+}
+
+.app-form__checkbox:checked + .app-form__label {
+	background: purple;
 }
