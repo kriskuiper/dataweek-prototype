@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+html, body {
+	background: #111;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 button {
 	border: 0;
 	border-radius: 0;
@@ -16,20 +21,26 @@ button {
 	display: flex;
 }
 
+.layout-title {
+	color: white;
+	text-transform: capitalize;
+}
+
 .app-image-container {
 	position: relative;
 	width: 1000px;
 	flex-grow: 1;
 	height: 100vh;
 	overflow: hidden;
+	padding: 1rem;
 }
 
 .app-image {
 	position: absolute;
-	top: 0;
+	top: 2rem;
 	left: 0;
 	display: block;
-	width: 100%;
+	width: 105%;
 }
 
 .app-image--is-vague {
@@ -38,7 +49,48 @@ button {
 
 .app-image--has-extra-class {
 	left: -18px;
-	top: -1px;
+	top: calc(2rem - 1px)
+}
+
+.legend {
+	color: white;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+}
+
+.legend-title {
+	margin-bottom: 0.625rem;
+	font-weight: semibold;
+	font-size: 1.2rem;
+}
+
+.legend-text {
+	display: flex;
+	line-height: 1.6;
+}
+
+.legend-bubble {
+	display: block;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	margin-right: 0.625rem;
+}
+
+.legend-bubble--purple {
+	background: #7c578a;
+}
+
+.legend-bubble--yellow {
+	background: #e5b636;
+}
+
+.legend-meta {
+	font-size: 0.875rem;
+	line-height: 1.4;
+	margin-top: 0.625rem;
+	font-style: italic;
 }
 
 .app-form-container {
@@ -47,8 +99,16 @@ button {
 	justify-content: space-between;
 	flex-direction: column;
 	height: 100vh;
-	background: grey;
+	background: #2f3136;
 	padding: 1rem;
+}
+
+.app-form__title {
+	margin-bottom: 1rem;
+	font-weight: semibold;
+	font-size: 1.2rem;
+	text-align: center;
+	color: white;
 }
 
 .app-form__input-group {
@@ -61,11 +121,40 @@ button {
 }
 
 .app-form__label {
+	text-align: center;
+	font-size: 1rem;
 	display: block;
-	background: lightgrey;
+	background: #7c7c7c;
+	color: #4d4d4d;
 	padding: 1rem;
 }
 
 .app-form__checkbox:checked + .app-form__label {
-	background: purple;
+	background: #e5b636;
+	color: #000;
+}
+
+.rest-button-helper-text {
+	margin-bottom: 0.625rem;
+	color: white;
+	text-align: center;
+}
+
+.rest-button {
+	background: #e5b636;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+}
+
+.rest-button:active {
+	transform: scale(0.98);
+}
+
+.author-info {
+	font-size: 0.875rem;
+	font-weight: 200;
+	font-style: italic;
+	color: #4d4d4d;
+	text-align: center;
 }
