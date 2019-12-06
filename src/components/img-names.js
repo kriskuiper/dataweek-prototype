@@ -6,4 +6,5 @@ export default [
 	{ name: 'markten', isShown: true, label: 'Marktplaatsen' },
 	{ name: 'sportplekken-openbaar', isShown: true, label: 'Openbare sportplekken' },
 	{ name: 'studenten-huisvesting', isShown: true, label: 'Studentencomplexen' },
+	{ name: 'studenten-huisvesting', isShown: true, label: 'Studentencomplexen nog meer' }
 ]
