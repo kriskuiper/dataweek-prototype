@@ -65,7 +65,7 @@ class App extends Component {
 							</p>
 							<p class="legend-text">
 								<div class="legend-bubble legend-bubble--yellow" aria-label="geel"></div>
-								<span>= 80db of hoger</span>
+								<span>= lager dan 80db</span>
 							</p>
 							<div class="legend-meta">
 								<p>Een gesprek is zo'n 60db</p>
